@@ -1,30 +1,31 @@
 var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
 
-ctx.beginPath();
-ctx.rect(20,40,50,50);
-ctx.fillStyle = "#FF0000";
-ctx.fill();
-ctx.closePath();
+/*The following code is commented because it was just used while starting the project and can be later on used for reference purposes.*/
+// ctx.beginPath();
+// ctx.rect(20,40,50,50);
+// ctx.fillStyle = "#FF0000";
+// ctx.fill();
+// ctx.closePath();
 
-ctx.beginPath();
-ctx.arc(240, 160, 20, 0, Math.PI*2, false);
-ctx.fillStyle = "green";
-ctx.fill();
-ctx.closePath();
+// ctx.beginPath();
+// ctx.arc(240, 160, 20, 0, Math.PI*2, false);
+// ctx.fillStyle = "green";
+// ctx.fill();
+// ctx.closePath();
 
-ctx.beginPath();
-ctx.rect(160, 10, 100, 40);
-ctx.strokeStyle = "rgba(0, 0, 255, 0.5)";
-ctx.stroke();
-ctx.closePath();
+// ctx.beginPath();
+// ctx.rect(160, 10, 100, 40);
+// ctx.strokeStyle = "rgba(0, 0, 255, 0.5)";
+// ctx.stroke();
+// ctx.closePath();
 
 
 ballRadius = 10;
 time = 0;
 fps = 100;
 function_call_interval = 1000/fps;
-// number_of_balls = 10;
+number_of_balls = 10; // This can be changed to any number. But the game build currently uses the first ball or '0' indexed ball
 sizeX = 480;
 sizeY = 320;
 balls = [];
