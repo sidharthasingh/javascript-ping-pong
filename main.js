@@ -1,5 +1,8 @@
+var print_token = false;
 var canvas = document.getElementById("myCanvas");
 var ctx = canvas.getContext("2d");
+var gameON = false;
+gameON = true;
 
 /*The following code is commented because it was just used while starting the project and can be later on used for reference purposes.*/
 // ctx.beginPath();
@@ -100,10 +103,11 @@ function logic(){
 
 function draw() {
 	time++;
-	ctx.clearRect(0, 0, canvas.width, canvas.height);
-    drawBalls();
-    logic();
+	ctx.clearRect(0, 0, canvas.width, canvas.height-paddleHeight);
+	drawBalls();
+	logic();
 }
 
 ball_init();
-// setInterval(draw,function_call_interval);
+if(gameON)
+	setInterval(draw,function_call_interval);
