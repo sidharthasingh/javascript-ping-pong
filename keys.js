@@ -40,4 +40,4 @@ function drawPaddle() {
 
 drawPaddle();
 if(gameON)
-	setInterval(drawPaddle,10);
+	paddleInterval = setInterval(drawPaddle,10);

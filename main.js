@@ -110,4 +110,4 @@ function draw() {
 
 ball_init();
 if(gameON)
-	setInterval(draw,function_call_interval);
+	ballInterval = setInterval(draw,function_call_interval);
