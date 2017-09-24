@@ -2,9 +2,17 @@ gameLogic = () => {
 	gameBall = balls[0];
 	if(gameBall.y>=canvas.height-paddleHeight-ballRadius)
 	{
-		if(gameBall.x-paddleX>=0 && gameBall.x-paddleX<=paddleWidth)
+		paddleX1 = paddleWidth+paddleX;
+		paddleY = canvas.height - paddleHeight;
+		ballX = gameBall.x;
+		ballY = gameBall.y;
+		if(ballX-paddleX>=0 && ballX-paddleX<=paddleWidth)
 		{
 			balls[0].dy = -balls[0].dy;
+		}
+		else if(Math.sqrt(Math.pow(ballX-paddleX,2)+Math.pow(ballY-paddleY),2)<=ballRadius)
+		{
+			balls[0].dy = -balls[0].dy;	
 		}
 		else
 		{
@@ -16,4 +24,4 @@ gameLogic = () => {
 	}
 }
 if(gameON)
-	gameLogicInterval = setInterval(gameLogic,5);
+	gameLogicInterval = setInterval(gameLogic,logic_refresh_rate);

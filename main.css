@@ -4,7 +4,14 @@
 }
 
 canvas { 
-	background: #eee; 
+	background: #AAA; 
 	display: block; 
-	margin: 0 auto; 
+	margin: 0 auto;
+	position: absolute;
+}
+
+body{
+	position: absolute;
+	height: 100%;
+	width: 100%;
 }
